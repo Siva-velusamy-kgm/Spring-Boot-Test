@@ -1,11 +1,4 @@
 steps:
-  - name: 'gcr.io/$PROJECT_ID/sonar-scanner:latest'
-    args:
-    - '-Dsonar.host.url=https://sonarcloud.io'
-    - '-Dsonar.login=d77f720687709fd9428fc354d7734e9f18aefbfc'
-    - '-Dsonar.projectKey=siva-velusamy-kgm'
-    - '-Dsonar.organization=Siva-velusamy-kgm'
-    - '-Dsonar.sources=.'
   - name: maven:3-jdk-8
     entrypoint: mvn
     args: ["package", "-Dmaven.test.skip=true"]  
